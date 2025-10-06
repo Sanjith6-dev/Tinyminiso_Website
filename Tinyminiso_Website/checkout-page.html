@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="header">
+        <!-- Logo -->
+    <div class="logo">
+      <a href="Homepage.html"><img src="Images/Logo.png" alt="Logo"></a>
+    </div>
+
+        <!-- Brand -->
+    <div class="brand">TINYMINISO</div>
+
+        <!-- Icons -->
+    <div class="icons">
+      <a href="Sign-inpage.html"><i class="fa-regular fa-user fa-md" style="width:36px; height:36px; color: black;"></i></a>
+      <div class="dropdown">
+    <!-- Search icon -->
+    <button class="search-icon" id="openSearch"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+    <!-- Dropdown content -->
+    <div class="dropdown-box01" id="searchBox">
+      <div class="dropdown-header">
+        <button class="close-btn" id="closeSearch">&times;</button>
+      </div>
+      <div class="search-bar">
+        <span>Search</span>
+        <input type="text" placeholder="Type here..." />
+        <span class="search-icon-inner"><i class="fa-solid fa-magnifying-glass"></i></span>
+      </div>
+    </div>
+  </div>
+  
+    <script>
+    const openBtn = document.getElementById('openSearch');
+    const closeBtn = document.getElementById('closeSearch');
+    const dropdownBox = document.getElementById('searchBox');
+
+    openBtn.addEventListener('click', () => {
+      dropdownBox.classList.toggle('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      dropdownBox.classList.remove('active');
+    });
+
+    // Close dropdown when clicking outside
+    window.addEventListener('click', (e) => {
+      if (!e.target.closest('.dropdown')) {
+        dropdownBox.classList.remove('active');
+      }
+    });
+  </script>
+     <a href="cartpage.html" style="color: #000;"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+  </header>
+
+     <nav class="navbar navbar-expand-lg">
+     <div class="container-fluid">
+
+    <!-- Toggle button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse justify-content-center mb-5" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">GIFTS</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+            <ul>
+            <li><a class="dropdown-item bold" href="#">NEW ARRIVALS</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS BY</a></li>
+            <li><a class="dropdown-item" href="#">PERSON</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS FOR HIM</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS FOR HER</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS FOR KIDS</a></li>
+            </ul>
+            
+
+            <ul>
+            <li><a class="dropdown-item bold" href="#">GIFTS BY PERSON</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS FOR FRIENDS</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS FOR</a></li>
+            <li><a class="dropdown-item" href="#">HUSBAND</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS FOR WIFE</a></li>
+            <li><a class="dropdown-item" href="#">COUPLE GIFTS</a></li>
+            </ul>
+            
+            <ul>
+            <li><a class="dropdown-item bold" href="#">GIFTS BY RELATIONSHIP</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS FOR MOM</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS FOR DAD</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS FOR</a></li>
+            <li><a class="dropdown-item" href="#">BROTHER</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS FOR SISTER</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS FOR</a></li>
+            <li><a class="dropdown-item" href="#">TEACHER</a></li>
+            </ul>
+            
+            
+            <ul>
+            <li><a class="dropdown-item bold" href="#">GIFTS BY OCCASION</a></li>
+            <li><a class="dropdown-item" href="#">BIRTHDAY GIFTS</a></li>
+            <li><a class="dropdown-item" href="#">ANNIVERSARY GIFTS</a></li>
+            <li><a class="dropdown-item" href="#">HOUSE WARMING</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS</a></li>
+            <li><a class="dropdown-item" href="#">RETURN GIFTS</a></li>
+            <li><a class="dropdown-item" href="#">WOMEN'S DAY GIFTS</a></li>
+            </ul>
+            
+
+            <ul>
+            <li><a class="dropdown-item bold" href="#">GIFTS BY PRICE</a></li>
+            <li><a class="dropdown-item" href="#">LUXURY GIFTS</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS UNDER</a></li>
+            <li><a class="dropdown-item" href="#">1000</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS UNDER</a></li>
+            <li><a class="dropdown-item" href="#">500</a></li>
+            <li><a class="dropdown-item" href="#">GIFTS UNDER</a></li>
+            <li><a class="dropdown-item" href="#">300</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SHOP BY CATEGORY</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="productlist-page.html" style="margin-bottom: 40px;">ALL STATIONARY</a></li>
+            <li><a class="dropdown-item" href="#" style="margin-bottom: 40px;">PEN & HIGHLITER</a></li>
+            <li><a class="dropdown-item" href="#" style="margin-bottom: 40px;">DESK LAMPS</a></li>
+            <li><a class="dropdown-item" href="#" style="margin-bottom: 40px;">SHARPENERS</a></li>
+            <li><a class="dropdown-item" href="#" style="margin-bottom: 40px;">ERASERS</a></li>
+            <li><a class="dropdown-item" href="#" style="margin-bottom: 40px;">GIFT HAMPERS</a></li>
+        </li>
+        </ul>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">HOME DECOR</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">STATIONARY LOVE</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" style="margin-bottom: 40px;">ACTION FIGURES</a></li>
+            <li><a class="dropdown-item" href="#" style="margin-bottom: 40px;">ANIME GIFTS</a></li>
+            <li><a class="dropdown-item" href="#" style="margin-bottom: 40px;">SIPPERS</a></li>
+            <li><a class="dropdown-item" href="#" style="margin-bottom: 40px;">BOTTLES</a></li>
+            <li><a class="dropdown-item" href="#" style="margin-bottom: 40px;">LAMPS</a></li>
+            <li><a class="dropdown-item" href="#" style="margin-bottom: 40px;">GIFT HAMPERS</a></li>
+        </li>
+        </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">SHOW ME ALL</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+     <!--form page-->
+
+     <div class="checkout-delivery">
+            <!--LEFT-->
+            <div class="check-out-form">
+
+                <div class="checkout-account">
+                <h3>Account</h3>
+                <img src="Images/Vector.png">
+                </div>
+                <div class="checkout-mail">
+                    <p>namemail@gmail.com</p>
+                </div>
+                <hr>
+                <div class="checkbox">
+                  <input type="checkbox" id="whatsapp">
+                  <label for="whatsapp">Get order updates on WhatsApp</label>
+                </div>
+
+                <div class="checkout-deliveryform">
+                <h3 style="font-size:24px">DELIVERY</h3>
+                </div>
+                 
+                <div class="select">
+                <select>
+                  <option>Country/Region</option>
+                  <option>India</option>
+                </select>
+                </div>
+
+                <div class="check-out-row">
+                 <input type="text" placeholder="First Name">
+                 <input type="text" placeholder="Last Name">
+                </div>
+
+                 <input type="text" class="input-border" placeholder="Address">
+                 <input type="text" class="input-border" placeholder="Apartment, Suite, etc.">
+                <div class="check-out-row">
+                 <input type="text" placeholder="City">
+                 <input type="text" placeholder="State">
+                 <input type="text" placeholder="Pincode">
+                </div>
+
+                <input type="text" class="input-border" placeholder="Phone Number">
+
+                <div class="checkbox">
+                <input type="checkbox" id="offers">
+                <label for="offers">Text me with news and offers</label>
+                </div>
+
+                <div class="shipping-method">
+                    <h3>SHIPPING METHOD</h3>
+                </div>
+
+                <div class="shipping-box">
+                    <div class="shipping-flex">
+                        <p>Standard Shipping With Online Payment</p>
+                        <p>RS.60</p>
+                    </div>
+                    <div class="shipping-flex-rs">
+                    <p>Express Shipping With Online Payment</p>
+                    <p>RS.60</p>
+                    </div>                    
+                </div>
+
+
+
+            
+
+       
+        </div>
+
+
+
+        <div class="checkout-product" style="flex:1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, enim illum voluptatum, natus minus deserunt ad fugiat quasi nobis minima necessitatibus eaque aspernatur quam repellat, nemo est cupiditate architecto ullam!</p>
+
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>     
+</body>
+</html>
